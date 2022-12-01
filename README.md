@@ -16,3 +16,9 @@ along the way, just in case.
 Collect stars by solving puzzles. Two puzzles will be made available on
 each day in the Advent calendar; the second puzzle is unlocked when you
 complete the first. Each puzzle grants one star. Good luck!
+
+## Running
+
+```sh
+cargo run --bin day_01_01
+```
