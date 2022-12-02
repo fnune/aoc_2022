@@ -16,8 +16,8 @@ fn parse_shape(input: &str) -> Option<Shape> {
 
 fn parse_line(input: &str) -> Option<(Shape, Shape)> {
     let mut shapes = input.split(" ").map(parse_shape);
-    match (shapes.next(), shapes.next()) {
-        (Some(Some(opponent)), Some(Some(own))) => Some((own, opponent)),
+    match (shapes.next().unwrap_or(None), shapes.next().unwrap_or(None)) {
+        (Some(opponent), Some(own)) => Some((own, opponent)),
         _ => None,
     }
 }
